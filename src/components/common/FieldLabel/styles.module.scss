@@ -1,0 +1,42 @@
+@import '../../../styles/mixins';
+
+.fieldLabel {
+  position: relative;
+
+  &_withError {
+    padding-bottom: 24px;
+  }
+
+  &__label {
+    justify-content: space-between;
+    align-items: flex-end;
+    max-width: 100%;
+    position: absolute;
+    display: flex;
+    height: 24px;
+    left: 0;
+    top: -28px;
+    @include text-ellipsis;
+
+    &_block {
+      margin-bottom: 4px;
+      position: static;
+    }
+  }
+
+  &__rightContent {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  &__des {
+    align-items: center;
+    max-width: 100%;
+    position: absolute;
+    display: flex;
+    height: 24px;
+    bottom: 0;
+    right: 0;
+  }
+}

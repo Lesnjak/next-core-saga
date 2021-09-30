@@ -1,0 +1,19 @@
+@import '../../../../styles/configs';
+
+.modalHeader {
+  min-height: 48px;
+  padding: 24px 48px 24px 24px;
+
+  &__closeBtn {
+    transition: color $anim-time;
+    position: absolute;
+    z-index: 10;
+    cursor: pointer;
+    right: 12px;
+    top: 12px;
+
+    &:hover {
+      color: var(--textDark);
+    }
+  }
+}

@@ -1,0 +1,8 @@
+@import '../../../../styles/mixins';
+
+.landingFooter {
+  background-color: var(--bgSecondary);
+  min-height: 120px;
+  width: 100%;
+  @include center;
+}

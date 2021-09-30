@@ -1,0 +1,96 @@
+{
+  "root": true, // Make sure eslint picks up the config at the root of the directory
+
+  "parser": "@typescript-eslint/parser",
+
+  "plugins": ["@typescript-eslint"],
+
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended", // Uses the recommended rules from @typescript-eslint/eslint-plugin
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended", // Uses the recommended rules from @eslint-plugin-react
+    "plugin:react-hooks/recommended",
+    "plugin:redux-saga/recommended",
+    "plugin:jsx-a11y/recommended",
+    "prettier", // Uses eslint-config-prettier to disable ESLint rules from @typescript-eslint/eslint-plugin that would conflict with prettier
+    "plugin:prettier/recommended" // Enables eslint-plugin-prettier and eslint-config-prettier. This will display prettier errors as ESLint errors. Make sure this is always the last configuration in the extends array.
+  ],
+
+  "env": {
+    "es6": true,
+    "browser": true, // Enables browser globals like window and document
+    "jest": true,
+    "node": true // Enables Node.js global variables and Node.js scoping.
+  },
+
+  "parserOptions": {
+    "ecmaVersion": 2020, // Use the latest ecmaScript standard
+    "sourceType": "module", // Allows using import/export statements
+    "ecmaFeatures": {
+      "jsx": true // Enable JSX since we're using React
+    }
+  },
+
+  "settings": {
+    "react": {
+      "version": "detect" // Automatically detect the react version
+    }
+  },
+
+  "rules": {
+    "@typescript-eslint/explicit-function-return-type": 0,
+    "@typescript-eslint/explicit-member-accessibility": 0,
+    "@typescript-eslint/member-delimiter-style": 0,
+    "jsx-a11y/no-static-element-interactions": 0,
+    "jsx-a11y/click-events-have-key-events": 0,
+    "@typescript-eslint/naming-convention": [
+      "error",
+      {
+        "selector": "interface",
+        "format": ["PascalCase"],
+        "custom": {
+          "regex": "^I[A-Z]",
+          "match": true
+        }
+      },
+      {
+        "selector": "enum",
+        "format": ["PascalCase"],
+        "custom": {
+          "regex": "Enum$",
+          "match": true
+        }
+      }
+    ],
+    "@typescript-eslint/no-explicit-any": 0,
+    "@typescript-eslint/no-var-requires": 0,
+    "@typescript-eslint/no-unused-vars": [
+      2,
+      {
+        "argsIgnorePattern": "^_"
+      }
+    ],
+    "react-hooks/rules-of-hooks": 0,
+    "@typescript-eslint/indent": 0,
+    "react/react-in-jsx-scope": 0, // react 17 doesn't require React imported
+    "jsx-a11y/anchor-is-valid": [
+      "error",
+      {
+        "specialLink": ["hrefLeft", "hrefRight"],
+        "components": ["Link"],
+        "aspects": ["invalidHref", "preferButton"]
+      }
+    ],
+    "react/jsx-uses-react": 0, // react 17 doesn't require React imported
+    "react/display-name": 0,
+    "prettier/prettier": ["error", {}, { "usePrettierrc": true }], // Use our .prettierrc file as source
+    "react/prop-types": 0,
+    "no-console": [
+      2,
+      {
+        "allow": ["warn", "error", "debug"]
+      }
+    ]
+  }
+}

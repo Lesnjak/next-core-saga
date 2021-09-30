@@ -1,0 +1,18 @@
+.modalFlowResult {
+  flex: 1;
+
+  &__statusCard {
+    margin-bottom: 24px;
+  }
+
+  &__resultItem {
+    flex-direction: column;
+    margin-bottom: 8px;
+    align-items: flex-start;
+    display: flex;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

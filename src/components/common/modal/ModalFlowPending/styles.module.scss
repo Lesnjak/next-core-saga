@@ -1,0 +1,11 @@
+.modalFlowPending {
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+  flex: 1;
+
+  &__loader {
+    margin: 0 0 32px;
+  }
+}

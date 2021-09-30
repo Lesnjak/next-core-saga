@@ -1,0 +1,122 @@
+/* stylelint-disable max-nesting-depth */
+@import '../../../../styles/configs';
+@import '../../../../styles/mixins';
+
+.selectWrapper {
+  min-height: inherit;
+  box-shadow: none;
+  height: 100%;
+
+  &_error {
+    .select__control {
+      border: 1px solid var(--error);
+    }
+  }
+
+  &_disabled {
+    .select__control--is-focused {
+      border: 1px solid var(--borderPrimary);
+    }
+
+    .select__menu {
+      display: none;
+    }
+  }
+
+  &__rightBlock {
+    &_xs {
+      :global {
+        .select {
+          &__indicators {
+            width: 28px;
+          }
+        }
+      }
+    }
+
+    &_sm {
+      :global {
+        .select {
+          &__indicators {
+            width: 36px;
+          }
+        }
+      }
+    }
+
+    &_md {
+      :global {
+        .select {
+          &__indicators {
+            width: 44px;
+          }
+        }
+      }
+    }
+
+    &_lg {
+      :global {
+        .select {
+          &__indicators {
+            width: 52px;
+          }
+        }
+      }
+    }
+  }
+
+  :global {
+    .select {
+      min-height: inherit;
+
+      &__control {
+        border-radius: $border-radius;
+        transition: border $anim-time-fast;
+        background: var(--bgPrimary);
+        min-height: inherit;
+        box-shadow: none;
+        border: 1px solid var(--borderPrimary);
+        height: 100%;
+
+        &--is-focused {
+          border: 1px solid var(--third);
+        }
+      }
+
+      &__placeholder {
+        color: var(--textHint);
+      }
+
+      &__indicators {
+        @include center;
+      }
+
+      &__indicator-separator {
+        display: none;
+      }
+
+      &__value-container {
+        padding-left: 16px;
+        min-height: inherit;
+      }
+
+      &__menu {
+        border-radius: $border-radius;
+        box-shadow: $box-shadow-light;
+        animation: mount $anim-time;
+        overflow: hidden;
+      }
+
+      &__menu-list {
+        padding: 0;
+      }
+
+      &__option {
+        &:hover {
+          background: var(--primaryDark);
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

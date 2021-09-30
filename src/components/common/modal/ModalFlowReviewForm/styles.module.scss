@@ -1,0 +1,14 @@
+.modalFlowReviewForm {
+  flex: 1;
+
+  &__reviewItem {
+    flex-direction: column;
+    margin-bottom: 8px;
+    align-items: flex-start;
+    display: flex;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

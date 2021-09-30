@@ -1,0 +1,28 @@
+@import '../../../../styles/configs';
+
+.inputCode {
+  &__field {
+    input {
+      background-color: var(--bgPrimary);
+      -moz-appearance: textfield;
+      border-radius: $border-radius;
+      margin-right: 10px;
+      font-weight: 500;
+      text-align: center;
+      outline: none;
+      border: 1px solid var(--borderPrimary);
+      height: 38px;
+      width: 50px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  }
+}

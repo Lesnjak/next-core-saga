@@ -1,0 +1,28 @@
+@import '../../../../styles/configs';
+
+.landingHeader {
+  background-color: var(--bgSecondary);
+  box-shadow: 0 0 6px 0 rgba(229, 190, 190, 0.16);
+  position: absolute;
+  padding: 0 24px;
+  height: $landing-header-height;
+  width: 100%;
+  left: 0;
+  top: 0;
+
+  &__content {
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    height: 100%;
+  }
+
+  &__rightBlock {
+    align-items: center;
+    display: flex;
+  }
+
+  &__signUpButton {
+    margin-right: 12px;
+  }
+}

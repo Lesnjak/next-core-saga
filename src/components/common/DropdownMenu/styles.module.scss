@@ -1,0 +1,35 @@
+@import '../../../styles/configs';
+@import '../../../styles/mixins';
+
+@keyframes mount {
+  from {
+    transform: translateY(16px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.dropdownMenu {
+  position: relative;
+
+  &__list {
+    background-color: var(--bgSecondary);
+    border-radius: $border-radius;
+    box-shadow: $box-shadow-card;
+    animation: mount $anim-time-slow;
+    min-width: 200px;
+    position: absolute;
+    right: 0;
+    top: 100%;
+  }
+
+  &_open {
+    .dropdownMenu__buttonWrapper {
+      pointer-events: none;
+    }
+  }
+}

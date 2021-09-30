@@ -1,0 +1,12 @@
+.cropper {
+  height: auto;
+  width: 100%;
+
+  > * {
+    &:first-child {
+      margin-bottom: 24px;
+      height: 100%;
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,40 @@
+html[data-palette='dark'] {
+  --primaryDark: #f2f2f2;
+  --primary: #fff;
+
+  --secondaryContrastText: #fff;
+  --secondaryLight: #ff5773;
+  --secondaryDark: #f03f5d;
+  --secondary: #ff3e5f;
+
+  --thirdLight: #a5b2e5;
+  --thirdDark: #5c6cab;
+  --third: #7387d6;
+
+  --errorLight: #ff5773;
+  --error: #ff3e5f;
+
+  --validLight: #50b780;
+  --valid: #39a36a;
+
+  --warning: #ff8a00;
+
+  --bgSecondary: #fff;
+  --bgPrimary: #282c34;
+
+  --iconPrimary: #808080;
+
+  --borderPrimary: #e2e2e2;
+  --borderDark: #bababa;
+
+  --textPrimaryDark: #3b3b3b;
+  --textSecondary: #ff5773;
+  --textPrimary: #fff;
+  --textThird: #7ab9de;
+  --textLight: #e2e2e2;
+  --textDark: #000;
+  --textHint: #bababa;
+
+  --shadowColorSecondary: rgba(0, 0, 0, 0.2);
+  --shadowColorPrimary: rgba(0, 0, 0, 0.16);
+}

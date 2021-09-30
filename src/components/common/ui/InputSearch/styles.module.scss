@@ -1,0 +1,140 @@
+@import '../../../../styles/configs';
+@import '../../../../styles/mixins';
+
+.inputSearch {
+  min-height: inherit;
+  position: relative;
+
+  input {
+    -webkit-appearance: none;
+    background-color: var(--bgPrimary);
+    border-radius: $border-radius;
+    transition: border-color $anim-time-fast, background-color $anim-time-fast,
+      opacity $anim-time;
+    min-height: inherit;
+    box-shadow: none;
+    padding: 0 16px;
+    outline: none;
+    border: 1px solid var(--borderPrimary);
+    color: var(--textPrimary);
+    width: 100%;
+
+    &::placeholder {
+      color: var(--textHint);
+    }
+
+    &:focus {
+      border-color: var(--third);
+      box-shadow: none;
+    }
+  }
+
+  &__iconWrapper {
+    transform: translateY(-50%);
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 50%;
+    @include center;
+
+    &_xs {
+      width: 28px;
+    }
+
+    &_sm {
+      width: 36px;
+    }
+
+    &_md {
+      width: 44px;
+    }
+
+    &_lg {
+      width: 52px;
+    }
+  }
+
+  &__clearIconWrapper {
+    transform: translateY(-50%);
+    position: absolute;
+    cursor: pointer;
+    height: 100%;
+    right: 0;
+    top: 50%;
+    @include center;
+
+    &:hover {
+      > div {
+        color: var(--iconPrimaryDark);
+      }
+    }
+
+    &_xs {
+      width: 28px;
+    }
+
+    &_sm {
+      width: 36px;
+    }
+
+    &_md {
+      width: 44px;
+    }
+
+    &_lg {
+      width: 52px;
+    }
+  }
+
+  &_iconWrapper {
+    &_xs {
+      input {
+        padding-left: 28px;
+      }
+    }
+
+    &_sm {
+      input {
+        padding-left: 36px;
+      }
+    }
+
+    &_md {
+      input {
+        padding-left: 44px;
+      }
+    }
+
+    &_lg {
+      input {
+        padding-left: 52px;
+      }
+    }
+  }
+
+  &_clearWrapper {
+    &_xs {
+      input {
+        padding-right: 28px;
+      }
+    }
+
+    &_sm {
+      input {
+        padding-right: 36px;
+      }
+    }
+
+    &_md {
+      input {
+        padding-right: 44px;
+      }
+    }
+
+    &_lg {
+      input {
+        padding-right: 52px;
+      }
+    }
+  }
+}

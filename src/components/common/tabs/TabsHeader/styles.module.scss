@@ -1,0 +1,59 @@
+@import '../../../../styles/configs';
+@import '../../../../styles/mixins';
+
+.tabsHeader {
+  border-bottom: 1px solid var(--borderDark);
+
+  &::-webkit-scrollbar {
+    height: 0;
+    width: 0;
+  }
+
+  @media (max-width: $breakpoint-down-md) {
+    overflow-y: hidden;
+    overflow-x: auto;
+  }
+
+  &__list {
+    position: relative;
+    display: inline-flex;
+    top: 1px;
+  }
+
+  &__item {
+    -webkit-user-select: none;
+    border-bottom: 3px solid transparent;
+    margin-right: 24px;
+    white-space: nowrap;
+    user-select: none;
+    padding: 12px 0;
+    cursor: pointer;
+    color: var(--textLight);
+
+    &:first-child {
+      margin-left: 16px;
+    }
+
+    &:last-child {
+      margin-right: 16px;
+    }
+
+    @media (max-width: $breakpoint-down-sm) {
+      margin-right: 16px;
+
+      &:first-child {
+        margin-left: 12px;
+      }
+
+      &:last-child {
+        margin-right: 12px;
+      }
+    }
+
+    &_active {
+      border-bottom: 3px solid var(--secondary);
+      cursor: default;
+      color: var(--secondary);
+    }
+  }
+}

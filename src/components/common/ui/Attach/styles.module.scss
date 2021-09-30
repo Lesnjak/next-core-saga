@@ -1,0 +1,102 @@
+@import '../../../../styles/configs';
+@import '../../../../styles/mixins';
+
+.attach {
+  border-radius: $border-radius;
+  padding: 16px;
+  border: 1px solid var(--borderPrimary);
+
+  &_bgColor {
+    &_primary {
+      background-color: var(--bgPrimary);
+    }
+
+    &_secondary {
+      background-color: var(--bgSecondary);
+    }
+  }
+
+  &_disablePadding {
+    padding: 0;
+  }
+
+  &__header {
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+  }
+
+  &__button {
+    background-color: var(--primary);
+    border-radius: $border-radius;
+    align-items: center;
+    user-select: none;
+    transition: $anim-time border;
+    display: flex;
+    padding: 4px 14px;
+    border: 1px solid var(--borderPrimary);
+    cursor: pointer;
+
+    &:hover {
+      border: 1px solid var(--secondary);
+    }
+
+    &_disabled {
+      opacity: 0.7;
+      cursor: default;
+
+      &:hover {
+        border: 1px solid var(--borderDark);
+      }
+    }
+  }
+
+  &__buttonIcon {
+    padding-right: 6px;
+  }
+
+  &__list {
+    margin-top: 10px;
+  }
+
+  &__listEmpty {
+    justify-content: center;
+    display: flex;
+    padding: 8px 0;
+    opacity: 0.4;
+  }
+
+  &__listItem {
+    border-radius: $border-radius;
+    align-items: center;
+    user-select: none;
+    margin-top: 6px;
+    max-width: 100%;
+    padding: 4px 12px;
+    display: inline-flex;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  &__listItemIcon {
+    padding-right: 10px;
+  }
+
+  &__listItemSize {
+    padding-left: 6px;
+    white-space: nowrap;
+  }
+
+  &__listItemDel {
+    padding-left: 16px;
+    cursor: pointer;
+  }
+
+  &__listItemName {
+    max-width: 260px;
+    flex: 1;
+    @include text-ellipsis;
+  }
+}

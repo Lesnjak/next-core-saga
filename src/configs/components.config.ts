@@ -1,0 +1,6 @@
+export enum UploadViewEnum {
+  DEFAULT_VIEW = 'DEFAULT_VIEW',
+  PREVIEW_VIEW = 'PREVIEW_VIEW',
+  UPLOAD_VIEW = 'UPLOAD_VIEW',
+  ERROR_VIEW = 'ERROR_VIEW',
+}

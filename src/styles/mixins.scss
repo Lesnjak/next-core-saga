@@ -1,0 +1,36 @@
+@mixin text-ellipsis {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+@mixin center() {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+@mixin svg-size($size) {
+  > div {
+    height: $size;
+    width: $size;
+
+    > div {
+      height: $size;
+      width: $size;
+    }
+  }
+
+  svg {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+@mixin svg-color($color) {
+  svg {
+    path {
+      fill: $color;
+    }
+  }
+}

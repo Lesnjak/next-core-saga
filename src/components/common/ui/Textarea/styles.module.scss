@@ -1,0 +1,66 @@
+@import '../../../../styles/configs';
+@import '../../../../styles/mixins';
+
+.textarea {
+  position: relative;
+  height: 100%;
+
+  textarea {
+    -webkit-appearance: none;
+    background-color: var(--bgPrimary);
+    border-radius: $border-radius;
+    transition: border-color $anim-time-fast, background-color $anim-time-fast,
+      opacity $anim-time;
+    min-height: 130px;
+    box-shadow: none;
+    padding: 16px;
+    outline: none;
+    display: block;
+    border: 1px solid var(--borderPrimary);
+    height: 100%;
+    width: 100%;
+    color: var(--textPrimary);
+
+    &::placeholder {
+      color: var(--textHint);
+    }
+
+    &:focus {
+      border-color: var(--third);
+      box-shadow: none;
+    }
+
+    &:read-only {
+      border: 1px solid var(--borderPrimary);
+    }
+  }
+
+  &_error {
+    textarea {
+      border-color: var(--error);
+    }
+  }
+
+  &_disableBorder {
+    textarea {
+      background-color: transparent;
+      padding-top: 8px;
+      border: 0;
+    }
+  }
+
+  &__lengthBlock {
+    position: absolute;
+    bottom: -24px;
+
+    &_side {
+      &_right {
+        right: 0;
+      }
+
+      &_left {
+        left: 0;
+      }
+    }
+  }
+}

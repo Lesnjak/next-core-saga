@@ -1,0 +1,82 @@
+/* stylelint-disable selector-max-compound-selectors, max-nesting-depth, selector-class-pattern */
+@import '../../../../styles/configs';
+
+.linkButton {
+  justify-content: center;
+  text-decoration: none;
+  border-radius: $border-radius;
+  align-items: center;
+  line-height: 1;
+  transition: opacity $anim-time-fast, background-color $anim-time-fast,
+    border-color $anim-time-fast, color $anim-time-fast;
+  min-height: inherit;
+  font-size: inherit;
+  display: inline-flex;
+  padding: 0 16px;
+  height: 100%;
+  width: 100%;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:active {
+    opacity: 0.75;
+  }
+
+  &_color {
+    &_secondary {
+      background-color: var(--secondary);
+      color: var(--secondaryContrastText);
+
+      &.linkButton_variant_outlined {
+        background-color: transparent;
+        border: 2px solid var(--secondary);
+        color: var(--secondary);
+
+        &:hover {
+          background-color: var(--secondary);
+          color: var(--secondaryContrastText);
+        }
+      }
+
+      &.linkButton_variant_contained {
+        background-color: var(--secondary);
+        box-shadow: $box-shadow-light;
+        color: var(--secondaryContrastText);
+
+        &:hover {
+          background-color: var(--secondaryDark);
+        }
+      }
+    }
+  }
+
+  &_padding {
+    &_xs {
+      padding: 0 16px;
+    }
+
+    &_sm {
+      padding: 0 24px;
+    }
+
+    &_md {
+      padding: 0 32px;
+    }
+
+    &_lg {
+      padding: 0 40px;
+    }
+  }
+
+  &_fontWeight {
+    &_bold {
+      font-weight: 700;
+    }
+
+    &_default {
+      font-weight: initial;
+    }
+  }
+}

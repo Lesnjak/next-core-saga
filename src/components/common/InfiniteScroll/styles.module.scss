@@ -1,0 +1,37 @@
+@import '../../../styles/configs';
+@import '../../../styles/mixins';
+
+.infiniteContainer {
+  align-items: center;
+  overflow: auto;
+  display: flex;
+  height: 200px;
+  width: 100%;
+
+  :global {
+    .infinite-scroll-component__outerdiv {
+      margin: auto;
+      width: 100%;
+    }
+  }
+
+  &__loader {
+    padding: 12px 0;
+    width: 100%;
+
+    @include center;
+  }
+
+  &__item {
+    margin-bottom: 6px;
+    padding: 6px 10px;
+    border: 1px solid var(--thirdDark);
+    width: 100%;
+  }
+
+  &__wrapper {
+    flex-direction: column;
+    display: flex;
+    width: 100%;
+  }
+}

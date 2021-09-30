@@ -1,0 +1,43 @@
+@import '../../../styles/configs';
+@import '../../../styles/mixins';
+
+.avatar {
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: default;
+  @include center;
+
+  &_withBorder {
+    transition: border-color $anim-time-fast;
+    border: 2px solid var(--borderPrimary);
+
+    &:hover {
+      border-color: var(--borderDark);
+    }
+  }
+
+  &_withClick {
+    cursor: pointer;
+  }
+
+  &_xs {
+    min-height: 36px;
+    min-width: 36px;
+    height: 36px;
+    width: 36px;
+  }
+
+  &_sm {
+    min-height: 80px;
+    min-width: 80px;
+    height: 80px;
+    width: 80px;
+  }
+
+  &_lg {
+    min-height: 100px;
+    min-width: 100px;
+    height: 100px;
+    width: 100px;
+  }
+}

@@ -1,0 +1,61 @@
+/* stylelint-disable selector-max-compound-selectors, max-nesting-depth */
+@import '../../../../styles/configs';
+@import '../../../../styles/mixins';
+
+.checkbox {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+  display: inline-block;
+  width: 16px;
+
+  &_disabled {
+    pointer-events: none;
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+
+  input {
+    display: none;
+
+    &:checked + .checkbox__label {
+      background-color: var(--valid);
+
+      .checkbox__icon {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__label {
+    background-color: var(--borderDark);
+    border-radius: 2px;
+    transition: background-color $anim-time-fast;
+    position: relative;
+    overflow: hidden;
+    display: block;
+    cursor: pointer;
+    height: 16px;
+    width: 100%;
+  }
+
+  &__icon {
+    transition: opacity $anim-time-fast;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    position: absolute;
+    opacity: 0;
+    height: 18px;
+    color: var(--primary);
+    width: 18px;
+    left: 50%;
+    top: 50%;
+    @include center;
+
+    svg {
+      vertical-align: initial;
+    }
+  }
+}

@@ -1,0 +1,80 @@
+/* stylelint-disable selector-max-compound-selectors, max-nesting-depth */
+@import '../../../../styles/configs';
+
+.switch {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+  display: inline-block;
+
+  input {
+    display: none;
+
+    &:checked + .switch__label {
+      background-color: var(--valid);
+
+      .switch__button {
+        transform: translateX(100%);
+      }
+    }
+  }
+
+  &__label {
+    background-color: var(--borderDark);
+
+    transition: background-color $anim-time-fast;
+    overflow: hidden;
+    display: block;
+    cursor: pointer;
+    width: 100%;
+  }
+
+  &__button {
+    transition: transform $anim-time-fast;
+    box-shadow: $box-shadow-light;
+    background: var(--primary);
+    display: block;
+  }
+
+  &_size {
+    &_md {
+      width: 44px;
+
+      .switch__label {
+        border-radius: 24px;
+        padding: 2px;
+        height: 24px;
+      }
+
+      .switch__button {
+        border-radius: 20px;
+        height: 20px;
+        width: 20px;
+      }
+    }
+
+    &_sm {
+      width: 36px;
+
+      .switch__label {
+        border-radius: 20px;
+        padding: 2px;
+        height: 20px;
+      }
+
+      .switch__button {
+        border-radius: 16px;
+        height: 16px;
+        width: 16px;
+      }
+    }
+  }
+
+  &_disabled {
+    pointer-events: none;
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+}
